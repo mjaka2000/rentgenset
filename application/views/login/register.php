@@ -3,11 +3,12 @@
 <body class="hold-transition register-page">
     <div class="wrapper">
         <div class="register-box">
-            <div class="card card-outline card-primary">
-                <div class="card-header text-center">
-                    <a href="" class="h5"><i class="fa fa-user-plus mr-2"></i><b>Register</b></a>
+            <div class="box box-outline box-primary">
+                <img class="img" src="<?= base_url(); ?>assets/upload/logo/ws.png" alt="Logo" width="100%">
+                <div class="box-header text-center">
+                    <h4><b>SILAHKAN REGISTER</b></h4>
                 </div>
-                <div class="card-body">
+                <div class="box-body">
                     <!-- <p class="login-box-msg"><b>*</b>Register sebagai user biasa</p> -->
                     <form action="<?= base_url('register/proses_register'); ?>" method="post">
                         <?php if ($this->session->flashdata('msg')) { ?>
@@ -31,40 +32,28 @@
                             </div>
                         <?php } ?>
 
-                        <div class="input-group mb-3">
+                        <div class="form-group has-feedback">
                             <input type="text" class="form-control" name="username" placeholder="Username" autofocus required="" />
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-user"></span>
-                                </div>
-                            </div>
+                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="form-group has-feedback">
                             <input type="email" class="form-control" name="email" placeholder="Email" autofocus required="" />
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
-                                </div>
-                            </div>
+                            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="form-group has-feedback">
                             <input type="password" class="form-control" name="password" placeholder="Password" required="" />
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
-                                </div>
-                            </div>
+                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+
                         </div>
-                        <div class="input-group mb-3">
+                        <div class="form-group has-feedback">
                             <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="" />
-                            <div class="input-group-append">
-                                <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
-                                </div>
-                            </div>
+                            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+
                         </div>
                         <div class="row">
-                            <div class="col-7">
+                            <div class="col-xs-8">
                                 <!-- <div class="icheck-primary">
                             <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                             <label for="agreeTerms">
@@ -74,8 +63,8 @@
                                 <?php echo anchor(base_url('login'), 'Log In') ?>
                             </div>
                             <!-- /.col -->
-                            <div class="col-5">
-                                <button type="submit" class="btn btn-sm btn-primary btn-block"><i class="fa fa-user-plus mr-2"></i>Register</button>
+                            <div class="col-xs-4">
+                                <button type="submit" class="btn btn-sm btn-primary btn-block"><i class="fa fa-user-plus"></i>&nbsp;Register</button>
                             </div>
                             <!-- /.col -->
                         </div>
@@ -94,7 +83,7 @@
                     <!-- <a href="login.html" class="text-center">I already have a membership</a> -->
                 </div>
                 <!-- /.form-box -->
-            </div><!-- /.card -->
+            </div><!-- /.box -->
         </div>
     </div>
 
