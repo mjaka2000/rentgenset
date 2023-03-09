@@ -1,5 +1,5 @@
 ###################
-Selamat datang di aplikasi gudang
+SIM Aplikasi Rental Genset WS
 ###################
 
 <!-- <h1>USER ADMIN</h1> -->
@@ -9,7 +9,7 @@ Selamat datang di aplikasi gudang
 
 <h4 class="modal-title" id="staticBackdropLabel">About This Version</h4>
 <ul type="square">
-                            <li>Website Version 1.2.7</li>
+                            <li>Website Version 0.1.0</li>
                             <li>Codeigniter Version 3.1.12</li>
                             <li>PHP Version 7.4</li>
                         </ul>
