@@ -1,0 +1,89 @@
+<?php $this->load->view('template/head1'); ?>
+<?php $this->load->view('admin/template/nav1'); ?>
+<?php $this->load->view('admin/template/sidebar1'); ?>
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Edit Operator</h1>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?= base_url('admin') ?>">Home</a></li>
+            <li class="breadcrumb-item"><a href="<?= base_url('admin/tabel_operator'); ?>"> Data Operator</a></li>
+            <li class="breadcrumb-item active">Edit Operator</li>
+        </ol>
+        <!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="container">
+                    <div class="box box-primary" style="width:50%;margin:auto">
+                        <div class="box-header">
+                            <h3 class="box-title"><i class="nav-icon fa fa-edit mr-2"></i>Edit Operator</h3>
+                        </div>
+                        <div class="box-body">
+                            <?php if ($this->session->flashdata('msg_sukses')) { ?>
+                                <div class="alert alert-success alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    <strong>Berhasil!</strong><br> <?= $this->session->flashdata('msg_sukses'); ?>
+                                </div>
+                            <?php } ?>
+                            <?php if (validation_errors()) { ?>
+                                <div class="alert alert-warning alert-dismissable">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    <strong>Perhatian!</strong><br> <?php echo validation_errors(); ?>
+                                </div>
+                            <?php } ?>
+
+                            <form action="<?= base_url('admin/proses_update_operator'); ?>" method="post" role="form">
+                                <?php foreach ($list_data as $op) { ?>
+                                    <div class="form-group">
+                                        <input type="hidden" name="id" value="<?= $op->id; ?>">
+                                        <label for="nama" class="form-label">Nama</label>
+                                        <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukkan Nama" required value="<?= $op->nama; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alamat" class="form-label">Alamat</label>
+                                        <input type="text" name="alamat" class="form-control" id="alamat" placeholder="Masukkan Alamat" required value="<?= $op->alamat; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="no_hp" class="form-label">No. HP</label>
+                                        <input type="number" name="no_hp" class="form-control" id="no_hp" placeholder="Masukkan No. HP" required value="<?= $op->no_hp; ?>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+                                        <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
+                                            <option value="">-- Pilih --</option>
+                                            <?php if ($op->jenis_kelamin == "Laki-Laki") { ?>
+                                                <option value="Laki-Laki" selected>Laki-Laki</option>
+                                                <option value="Perempuan">Perempuan</option>
+                                            <?php } else { ?>
+                                                <option value="Laki-Laki">Laki-Laki</option>
+                                                <option value="Perempuan" selected>Perempuan</option>
+                                            <?php } ?>
+                                        </select>
+                                    </div>
+                                <?php } ?>
+                                <hr>
+                                <div class="form-group" align="center">
+                                    <a href="<?= base_url('admin/tabel_operator'); ?>" type="button" class="btn btn-sm btn-default" name="btn_kembali"><i class="fa fa-arrow-left mr-2"></i>Kembali</a>
+                                    <button type="reset" class="btn btn-sm btn-info"><i class="fa fa-eraser mr-2"></i>Reset</button>
+                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-check mr-2"></i>Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!-- /.content -->
+</div>
+
+<?php $this->load->view('template/footer1'); ?>
