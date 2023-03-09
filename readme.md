@@ -1,5 +1,5 @@
 ###################
-SIM Aplikasi Rental Genset WS
+SIMRent Genset WS
 ###################
 
 <!-- <h1>USER ADMIN</h1> -->
