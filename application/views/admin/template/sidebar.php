@@ -82,12 +82,7 @@
                             <span>Data Genset</span>
                         </a>
                     </li>
-                    <li>
-                        <a href="<?= base_url(); ?>admin/tabel_service_genset">
-                            <i class="fa fa-wrench nav-icon"></i>
-                            <span>Data Perbaikan Genset</span>
-                        </a>
-                    </li>
+
                     <li>
                         <a href="<?= base_url(); ?>admin/tabel_mobil">
                             <i class="fa fa-car nav-icon"></i>
@@ -108,6 +103,12 @@
                     </li>
 
                 </ul>
+            </li>
+            <li>
+                <a href="<?= base_url(); ?>admin/tabel_service_genset">
+                    <i class="fa fa-wrench nav-icon"></i>
+                    <span>Data Perbaikan Genset</span>
+                </a>
             </li>
             <li class="treeview"><a href="#"><i class="fa fa-copy"></i>
                     <span>Transaksi</span><span class="pull-right-container"></span><i class="pull-right fa fa-angle-left "></i></span>
@@ -135,25 +136,6 @@
                 </a>
 
             </li>
-            <!-- <li class="treeview"><a href="#"><i class="fa fa-clone"></i>
-                    <span>Main Data</span><span class="pull-right-container"></span><i class="pull-right fa fa-angle-left "></i></span>
-                </a>
-                <ul class="treeview-menu">
-                    <li>
-                        <a href="<?= base_url(); ?>admin/tabel_keluar">
-                            <i class="fa fa-upload"></i>
-                            <span>Data Genset Keluar</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url(); ?>admin/tabel_masuk">
-                            <i class="fa fa-download"></i>
-                            <span>Data Genset Masuk</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </li> -->
 
             <!-- <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li> -->
             <li class="header">PENGATURAN</li>
@@ -175,9 +157,6 @@
                     </li>
                 </ul>
             </li>
-            <!-- <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li> -->
-            <!-- <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li> -->
-            <!-- <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
         </ul>
     </section>
     <!-- /.sidebar -->
