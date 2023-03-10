@@ -30,6 +30,21 @@
         maxView: 4,
     });
 </script>
+<script>
+    document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            document.querySelector(
+                "body").style.visibility = "hidden";
+            document.querySelector(
+                "#loading").style.visibility = "visible";
+        } else {
+            document.querySelector(
+                "#loading").style.display = "none";
+            document.querySelector(
+                "body").style.visibility = "visible";
+        }
+    };
+</script>
 <script type="text/javascript">
     $("#kode_genset").change(function() {
         let kode_genset = $(this).val();
