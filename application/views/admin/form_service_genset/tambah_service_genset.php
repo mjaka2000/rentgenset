@@ -1,6 +1,6 @@
-<?php $this->load->view('template/head1'); ?>
-<?php $this->load->view('admin/template/nav1'); ?>
-<?php $this->load->view('admin/template/sidebar1'); ?>
+<?php $this->load->view('template/head'); ?>
+<?php $this->load->view('admin/template/nav'); ?>
+<?php $this->load->view('admin/template/sidebar'); ?>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -21,7 +21,7 @@
                 <div class="container">
                     <div class="box box-primary" style="width:50%;margin:auto">
                         <div class="box-header">
-                            <h3 class="box-title"><i class="nav-icon fa fa-plus-circle mr-2"></i>Tambah Perbaikan Genset</h3>
+                            <h3 class="box-title"><i class="nav-icon fa fa-plus-circle mr-2"></i>&nbsp;Tambah Perbaikan Genset</h3>
                         </div>
                         <div class="box-body">
                             <?php if ($this->session->flashdata('msg_sukses')) { ?>
@@ -40,9 +40,9 @@
                             <form action="<?= base_url('admin/proses_tambah_service_genset'); ?>" method="post" role="form">
 
                                 <div class="form-group">
-                                    <label for="kode_genset" class="form-label">Kode Genset</label>
+                                    <label for="kode_genset" class="form-label">Nomor Genset</label>
                                     <select name="kode_genset" class="form-control" id="kode_genset" required>
-                                        <option value="" selected>-- Pilih Kode Genset --</option>
+                                        <option value="" selected>-- Pilih Nomor Genset --</option>
                                         <?php foreach ($list_genset as $g) { ?>
                                             <option value="<?= $g->kode_genset; ?>"><?= $g->kode_genset; ?></option>
                                         <?php } ?>
@@ -57,7 +57,7 @@
                                     <input type="text" name="jenis_perbaikan" class="form-control" id="jenis_perbaikan" placeholder="Contoh : Perbaikan Aki dll" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="spare_part" class="form-label">Spare Part(Diganti)</label><span style="color: red;"><small>*Jika tidak ada yang diganti kosongkan</small></span>
+                                    <label for="spare_part" class="form-label">Spare Part(Diganti)</label><span style="color: red;"><small>*Jika tidak ada yang diganti abaikan</small></span>
                                     <input type="text" name="spare_part" class="form-control" id="spare_part" placeholder="Filter Oli, Filter Solar dll">
                                 </div>
                                 <div class="form-group">
@@ -73,15 +73,15 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="biaya_perbaikan" class="form-label">Biaya Perbaikan</label>
-                                    <input type="text" name="biaya_perbaikan" class="form-control" id="biaya_perbaikan">
+                                    <label for="biaya_perbaikan" class="form-label">Perkiraan Biaya Perbaikan</label>
+                                    <input type="text" name="biaya_perbaikan" class="form-control" id="biaya_perbaikan" value="0">
                                 </div>
 
                                 <hr>
                                 <div class="form-group" align="center">
                                     <a href="<?= base_url('admin/tabel_service_genset'); ?>" type="button" class="btn btn-sm btn-default" name="btn_kembali"><i class="fa fa-arrow-left mr-2"></i>Kembali</a>
-                                    <button type="reset" class="btn btn-sm btn-info"><i class="fa fa-eraser mr-2"></i>Reset</button>
-                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-check mr-2"></i>Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-warning"><i class="fa fa-eraser mr-2"></i>Reset</button>
+                                    <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-check mr-2"></i>Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -93,4 +93,8 @@
     <!-- /.content -->
 </div>
 
-<?php $this->load->view('template/footer1'); ?>
+<?php $this->load->view('template/footer'); ?>
+<?php $this->load->view('admin/template/script') ?>
+</body>
+
+</html>

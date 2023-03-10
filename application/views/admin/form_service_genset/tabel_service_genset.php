@@ -1,6 +1,6 @@
-<?php $this->load->view('template/head1'); ?>
-<?php $this->load->view('admin/template/nav1'); ?>
-<?php $this->load->view('admin/template/sidebar1'); ?>
+<?php $this->load->view('template/head'); ?>
+<?php $this->load->view('admin/template/nav'); ?>
+<?php $this->load->view('admin/template/sidebar'); ?>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -21,7 +21,7 @@
                 <!-- Default box -->
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title"><i class="fa fa-wrench mr-2"></i>Data Perbaikan Genset</h3>
+                        <h3 class="box-title"><i class="fa fa-wrench mr-2"></i>&nbsp;Data Perbaikan Genset</h3>
                     </div>
                     <div class="box-body">
                         <?php if ($this->session->flashdata('msg_sukses')) { ?>
@@ -30,7 +30,7 @@
                                 <strong>Berhasil!</strong><br> <?= $this->session->flashdata('msg_sukses'); ?>
                             </div>
                         <?php } ?>
-                        <a href="<?= base_url('admin/tambah_service_genset'); ?>" style="margin-bottom:10px;" type="button" class="btn btn-sm btn-primary" name="tambah_data"><i class="fa fa-plus mr-2" aria-hidden="true"></i>Tambah Data</a>
+                        <a href="<?= base_url('admin/tambah_service_genset'); ?>" style="margin-bottom:10px;" type="button" class="btn btn-sm btn-primary" name="tambah_data"><i class="fa fa-plus "></i>&nbsp;Tambah Data</a>
 
                         <table id="mytable" class="table table-bordered table-hover" style="width:100%">
                             <thead>
@@ -92,4 +92,8 @@
     <!-- /.content -->
 </div>
 
-<?php $this->load->view('template/footer1'); ?>
+<?php $this->load->view('template/footer'); ?>
+<?php $this->load->view('admin/template/script') ?>
+</body>
+
+</html>
