@@ -20,43 +20,14 @@
     <div id="loading">
       <img src="<?= base_url(); ?>assets/style/loading.gif" alt="loading" width="50%">
     </div>
-    <!-- Default box -->
-    <!-- <div class="box">
-      <div class="box-header with-border">
-        <h3 class="box-title">Title</h3>
 
-        <div class="box-tools pull-right">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-            <i class="fa fa-minus"></i></button>
-          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-            <i class="fa fa-times"></i></button>
-        </div>
-      </div>
-      <div class="box-body">
-        Start creating your amazing application!
-      </div> -->
-    <!-- /.box-body -->
-    <!-- <div class="box-footer">
-        Footer
-      </div> -->
-    <!-- /.box-footer-->
-    <!-- </div> -->
     <div class="row">
 
     </div>
     <div class="box">
-      <!-- <div class="box-header with-border">
-        <h3 class="box-title">Title</h3>
 
-        <div class="box-tools pull-right">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
-            <i class="fa fa-minus"></i></button>
-          <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-            <i class="fa fa-times"></i></button>
-        </div>
-      </div> -->
       <div class="box-body">
-        <h2 align="center">Selamat Datang!</h2>
+        <h2 align="center">Selamat Datang, User <?= $this->session->userdata('name') ?>!</h2>
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-aqua">
