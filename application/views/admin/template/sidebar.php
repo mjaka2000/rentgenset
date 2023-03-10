@@ -22,55 +22,9 @@
             <li>
                 <a href="<?= base_url('admin') ?>">
                     <i class="fa fa-home"></i> <span>Dashboard</span>
-                    <!-- <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
-                    </span> -->
                 </a>
 
             </li>
-            <!-- <li class="treeview"><a href="#"><i class="fa fa-edit"></i>
-                    <span>Forms</span><span class="pull-right-container"></span><i class="pull-right fa fa-angle-left "></i></span>
-                </a>
-                <ul class="treeview-menu">
-                    <li>
-                        <a href="<?= base_url(); ?>admin/tambah_genset">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Tambah Data Genset</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url(); ?>admin/tambah_service_genset">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Tambah Data Service Genset</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url(); ?>admin/tambah_data_mobil">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Tambah Data Mobil</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url(); ?>admin/tambah_data_operator">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Tambah Data Operator</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url(); ?>admin/tambah_data_pelanggan">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Tambah Data Pelanggan</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="<?= base_url(); ?>admin/tambah_genset_keluar">
-                            <i class="fa fa-circle-o"></i>
-                            <span>Tambah Genset Keluar</span>
-                        </a>
-                    </li>
-
-                </ul>
-            </li> -->
 
             <li class="treeview"><a href="#"><i class="fa fa-table"></i>
                     <span>Data Master</span><span class="pull-right-container"></span><i class="pull-right fa fa-angle-left "></i></span>
@@ -106,8 +60,14 @@
             </li>
             <li>
                 <a href="<?= base_url(); ?>admin/tabel_service_genset">
-                    <i class="fa fa-wrench nav-icon"></i>
+                    <i class="fa fa-file nav-icon"></i>
                     <span>Data Perbaikan Genset</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-file nav-icon"></i>
+                    <span>Data Sparepart Genset</span>
                 </a>
             </li>
             <li class="treeview"><a href="#"><i class="fa fa-copy"></i>
