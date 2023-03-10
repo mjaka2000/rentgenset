@@ -104,7 +104,7 @@
     })
 
     document.oncontextmenu = function() {
-        return false;
+        return true;
     };
 
     $('.btn-delete').on('click', function() {
