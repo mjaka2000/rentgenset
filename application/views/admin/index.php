@@ -17,7 +17,9 @@
 
   <!-- Main content -->
   <section class="content">
-
+    <div id="loading">
+      <img src="<?= base_url(); ?>assets/style/loading.gif" alt="loading" width="50%">
+    </div>
     <!-- Default box -->
     <!-- <div class="box">
       <div class="box-header with-border">

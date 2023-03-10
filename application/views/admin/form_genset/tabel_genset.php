@@ -15,7 +15,9 @@
 
     <!-- Main content -->
     <section class="content">
-
+        <div id="loading">
+            <img src="<?= base_url(); ?>assets/style/loading.gif" alt="loading" width="50%">
+        </div>
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
