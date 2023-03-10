@@ -117,6 +117,11 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="<?= base_url(''); ?>admin/signout">
+                    <i class="fa fa-sign-out"></i>
+                    <span>Logout</span></a>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

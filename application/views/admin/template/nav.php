@@ -48,7 +48,7 @@
                                 <a href="<?= base_url('admin/profile'); ?>" class="btn btn-sm btn-default btn-flat"><i class="fa fa-cog" aria-hidden=" true"></i>&nbsp;Profile</a>
                             </div>
                             <div class="pull-right">
-                                <a href="<?= base_url('admin/signout'); ?>" class="btn btn-sm btn-default btn-flat"><i class="fa fa-sign-out" aria-hidden=" true"></i>&nbsp;Sign out</a>
+                                <a href="<?= base_url('admin/signout'); ?>" class="btn btn-sm btn-default btn-flat"><i class="fa fa-sign-out" aria-hidden=" true"></i>&nbsp;Logout</a>
                             </div>
                         </li>
                     </ul>
