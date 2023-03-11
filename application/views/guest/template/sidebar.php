@@ -31,31 +31,31 @@
                 <ul class="treeview-menu">
                     <li>
                         <a href="<?= base_url(); ?>guest/tabel_genset">
-                            <i class="fa fa-cogs"></i>
+                            <i class="fa fa-circle-o"></i>
                             <span>Data Genset</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?= base_url(); ?>guest/tabel_service_genset">
-                            <i class="fa fa-wrench nav-icon"></i>
+                            <i class="fa fa-circle-o"></i>
                             <span>Data Perbaikan Genset</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?= base_url(); ?>guest/tabel_mobil">
-                            <i class="fa fa-car nav-icon"></i>
+                            <i class="fa fa-circle-o"></i>
                             <span>Data Mobil</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?= base_url(); ?>guest/tabel_operator">
-                            <i class="fa fa-user nav-icon"></i>
+                            <i class="fa fa-circle-o"></i>
                             <span>Data Operator</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?= base_url(); ?>guest/tabel_pelanggan">
-                            <i class="fa fa-users nav-icon"></i>
+                            <i class="fa fa-circle-o"></i>
                             <span>Data Pelanggan</span>
                         </a>
                     </li>
@@ -84,13 +84,13 @@
             </li>
             <li>
                 <a href="<?= base_url(); ?>guest/tambah_data_pelanggan">
-                    <i class="fa fa-edit"></i>
+                    <i class="fa fa-file"></i>
                     <span>Tambah Data Pelanggan</span>
                 </a>
             </li>
             <li>
                 <a href="<?= base_url('guest/pengajuan_baru') ?>">
-                    <i class="fa fa-edit"></i> <span>Permohonan</span>
+                    <i class="fa fa-file"></i> <span>Permohonan</span>
                 </a>
 
             </li>
@@ -110,9 +110,11 @@
                     <span>Menu Profile</span>
                 </a>
             </li>
-            <!-- <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li> -->
-            <!-- <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li> -->
-            <!-- <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
+            <li>
+                <a href="<?= base_url(''); ?>admin/signout">
+                    <i class="fa fa-sign-out"></i>
+                    <span>Logout</span></a>
+            </li>
         </ul>
     </section>
     <!-- /.sidebar -->

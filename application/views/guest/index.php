@@ -1,6 +1,6 @@
-<?php $this->load->view('template/head1'); ?>
-<?php $this->load->view('guest/template/nav1'); ?>
-<?php $this->load->view('guest/template/sidebar1'); ?>
+<?php $this->load->view('template/head'); ?>
+<?php $this->load->view('guest/template/nav'); ?>
+<?php $this->load->view('guest/template/sidebar'); ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -17,7 +17,9 @@
 
   <!-- Main content -->
   <section class="content">
-
+    <div id="loading">
+      <img src="<?= base_url(); ?>assets/style/loading.gif" alt="loading" width="50%">
+    </div>
     <div class="row">
 
     </div>
@@ -39,4 +41,8 @@
 </div>
 <!-- /.content-wrapper -->
 
-<?php $this->load->view('template/footer1'); ?>
+<?php $this->load->view('template/footer'); ?>
+<?php $this->load->view('guest/template/script') ?>
+</body>
+
+</html>

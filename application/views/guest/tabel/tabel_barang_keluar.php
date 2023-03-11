@@ -1,6 +1,6 @@
-<?php $this->load->view('template/head1'); ?>
-<?php $this->load->view('guest/template/nav1'); ?>
-<?php $this->load->view('guest/template/sidebar1'); ?>
+<?php $this->load->view('template/head'); ?>
+<?php $this->load->view('guest/template/nav'); ?>
+<?php $this->load->view('guest/template/sidebar'); ?>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -16,13 +16,15 @@
 
     <!-- Main content -->
     <section class="content">
-
+        <div id="loading">
+            <img src="<?= base_url(); ?>assets/style/loading.gif" alt="loading" width="50%">
+        </div>
         <div class="row">
             <div class="col-xs-12">
                 <!-- Default box -->
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title"><i class="fa fa-upload mr-2"></i>Data Genset Keluar</h3>
+                        <h3 class="box-title"><i class="fa fa-upload"></i>&nbsp;Data Genset Keluar</h3>
                     </div>
                     <div class="box-body">
                         <?php if ($this->session->flashdata('msg_sukses')) { ?>
@@ -99,4 +101,8 @@
     <!-- /.content -->
 </div>
 
-<?php $this->load->view('template/footer1'); ?>
+<?php $this->load->view('template/footer'); ?>
+<?php $this->load->view('guest/template/script') ?>
+</body>
+
+</html>
