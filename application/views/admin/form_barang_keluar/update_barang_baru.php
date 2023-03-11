@@ -1,6 +1,6 @@
-<?php $this->load->view('template/head1'); ?>
-<?php $this->load->view('admin/template/nav1'); ?>
-<?php $this->load->view('admin/template/sidebar1'); ?>
+<?php $this->load->view('template/head'); ?>
+<?php $this->load->view('admin/template/nav'); ?>
+<?php $this->load->view('admin/template/sidebar'); ?>
 
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -16,6 +16,9 @@
 
     <!-- Main content -->
     <section class="content">
+        <div id="loading">
+            <img src="<?= base_url(); ?>assets/style/loading.gif" alt="loading" width="50%">
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="container">
@@ -176,8 +179,8 @@
                                 <?php } ?>
                                 <div class="box-footer" align="center">
                                     <a href="<?= base_url('admin/tabel_barang_keluar'); ?>" type="button" class="btn btn-sm btn-default" name="btn_kembali"><i class="fa fa-arrow-left mr-2"></i>Kembali</a>
-                                    <button type="reset" class="btn btn-sm btn-info"><i class="fa fa-eraser mr-2"></i>Reset</button>
-                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-check mr-2"></i>Submit</button>
+                                    <button type="reset" class="btn btn-sm btn-warning"><i class="fa fa-eraser mr-2"></i>Reset</button>
+                                    <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-check mr-2"></i>Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -189,4 +192,8 @@
     <!-- /.content -->
 </div>
 
-<?php $this->load->view('template/footer1'); ?>
+<?php $this->load->view('template/footer'); ?>
+<?php $this->load->view('admin/template/script') ?>
+</body>
+
+</html>

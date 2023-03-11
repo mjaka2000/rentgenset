@@ -1,6 +1,6 @@
-<?php $this->load->view('template/head1'); ?>
-<?php $this->load->view('admin/template/nav1'); ?>
-<?php $this->load->view('admin/template/sidebar1'); ?>
+<?php $this->load->view('template/head'); ?>
+<?php $this->load->view('admin/template/nav'); ?>
+<?php $this->load->view('admin/template/sidebar'); ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -16,12 +16,15 @@
 
     <!-- Main content -->
     <section class="content">
+        <div id="loading">
+            <img src="<?= base_url(); ?>assets/style/loading.gif" alt="loading" width="50%">
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="container">
                     <div class="box box-primary" style="width:50%;margin:auto">
                         <div class="box-header with-border">
-                            <h3 class="box-title"><i class="fa fa-user mr-2"></i>Edit User</h3>
+                            <h3 class="box-title"><i class="fa fa-user mr-2"></i>&nbsp;Edit User</h3>
                         </div>
                         <div class="box-body">
                             <form action="<?= base_url('admin/proses_edituser'); ?>" method="post" role="form">
@@ -44,18 +47,6 @@
                                         <label for="username" class="form-label">Username</label>
                                         <input type="text" name="username" class="form-control" id="username" placeholder="Username" required="" value="<?= $d->username; ?>">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="email" class="form-label">Email</label>
-                                        <input type="email" name="email" class="form-control" id="email" placeholder="Email" required="" value="<?= $d->email; ?>">
-                                    </div>
-                                    <!-- <div class="form-group">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control" id="password" placeholder="Password">
-                                </div> -->
-                                    <!-- <div class="form-group">
-                                    <label for="confirm_password" class="form-label">Konfirmasi Password</label>
-                                    <input type="password" name="confirm_password" class="form-control" id="confirm_password" placeholder="Konfirmasi Password">
-                                </div> -->
                                     <div class="form-group ">
                                         <label for="role" class="form-label">Role</label>
                                         <select name="role" id="" style="width: 30%;" class="form-control">
@@ -72,7 +63,7 @@
                                 <hr>
                                 <div class="form-group" align="center">
                                     <a href="<?= base_url('admin/users'); ?>" type="button" class="btn btn-sm btn-default" onclick="" name="btn_kembali"><i class="fa fa-arrow-left mr-2"></i>Kembali</a>
-                                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-check mr-2"></i>Submit</button>
+                                    <button type="submit" class="btn btn-sm btn-success"><i class="fa fa-check mr-2"></i>Submit</button>
                                 </div>
                             </form>
                         </div>
@@ -87,4 +78,8 @@
 </div>
 <!-- /.content-wrapper -->
 
-<?php $this->load->view('template/footer1'); ?>
+<?php $this->load->view('template/footer'); ?>
+<?php $this->load->view('admin/template/script') ?>
+</body>
+
+</html>

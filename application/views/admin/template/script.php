@@ -21,6 +21,7 @@
 
 
 <script type="text/javascript">
+    //* Script untuk membuat input tanggal
     $('.form_datetime').datetimepicker({
         format: 'dd-mm-yyyy',
         autoclose: true,
@@ -31,6 +32,7 @@
     });
 </script>
 <script>
+    //* Script untuk menampilkan loading
     document.onreadystatechange = function() {
         if (document.readyState !== "complete") {
             document.querySelector(
@@ -46,6 +48,7 @@
     };
 </script>
 <script type="text/javascript">
+    //* Script untuk memuat data genset
     $("#kode_genset").change(function() {
         let kode_genset = $(this).val();
         <?php foreach ($list_genset as $l) { ?>
@@ -56,11 +59,13 @@
     })
 </script>
 <script type="text/javascript">
+    //* Script untuk mengubah atribut jumlah hari
     function editHari() {
         document.getElementById("jumlah_hari").removeAttribute("readonly");
     }
 </script>
 <script type="text/javascript">
+    //* Script untuk memuat data genset
     $("#kode_genset").change(function() {
         let kode_genset = $(this).val();
         let stok_gd = document.getElementById("stok_gd");
@@ -96,6 +101,7 @@
     })
 </script>
 <script>
+    //* Script untuk memuat sweetalert status genset
     $('.btn-kembali').on('click', function() {
         var getLink = $(this).attr('href');
         Swal.fire({
@@ -137,7 +143,7 @@
             }
         })
         return false;
-    });
+    }); //* Script untuk memuat sweetalert hapus data
 
     $(function() {
         $('#mytable').DataTable()
@@ -159,5 +165,5 @@
             'info': true,
             'autoWidth': false
         })
-    });
+    }); //* Script untuk memuat datatable
 </script>
