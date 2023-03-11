@@ -71,20 +71,17 @@ class Admin extends CI_Controller
 	public function proses_tambahuser()
 	{
 		$this->form_validation->set_rules('username', 'Username', 'required');
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 		$this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]');
 
 		if ($this->form_validation->run() == true) {
 
 			$username 	= $this->input->post('username', true);
-			$email 		= $this->input->post('email', true);
 			$password 	= $this->input->post('password', true);
 			$role 		= $this->input->post('role', true);
 
 			$data = array(
 				'username'	=> $username,
-				'email' 	=> $email,
 				'password' 	=> $this->hash_password($password),
 				'role' 		=> $role,
 			);
@@ -131,18 +128,15 @@ class Admin extends CI_Controller
 	public function proses_edituser()
 	{
 		$this->form_validation->set_rules('username', 'Username', 'required');
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 
 		if ($this->form_validation->run() == true) {
 			$id	= $this->input->post('id', true);
 			$username	= $this->input->post('username', true);
-			$email	= $this->input->post('email', true);
 			$role = $this->input->post('role', true);
 
 			$where = array('id' => $id);
 			$data = array(
 				'username' => $username,
-				'email' => $email,
 				'role' => $role,
 			);
 			$this->M_admin->update('tb_user', $data, $where);
@@ -170,18 +164,15 @@ class Admin extends CI_Controller
 
 	public function proses_newpassword()
 	{
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 		$this->form_validation->set_rules('new_password', 'Password Baru', 'required');
 		$this->form_validation->set_rules('confirm_new_password', 'Konfirmasi Password Baru', 'required|matches[new_password]');
 
 		if ($this->form_validation->run() == true) {
 
 			$username = $this->input->post('username');
-			$email = $this->input->post('email');
 			$new_password = $this->input->post('new_password');
 
 			$data = array(
-				'email' => $email,
 				'password' => $this->hash_password($new_password)
 			);
 			$where = array(
@@ -684,7 +675,7 @@ class Admin extends CI_Controller
 	####################################
 
 	####################################
-	// Data Operator 
+	//* Data Operator 
 	####################################
 
 	public function tabel_operator()
@@ -722,12 +713,10 @@ class Admin extends CI_Controller
 			$nama = $this->input->post('nama', TRUE);
 			$alamat = $this->input->post('alamat', TRUE);
 			$no_hp = $this->input->post('no_hp', TRUE);
-			$jenis_kelamin = $this->input->post('jenis_kelamin', TRUE);
 			$data = array(
 				'nama' => $nama,
 				'alamat' => $alamat,
-				'no_hp' => $no_hp,
-				'jenis_kelamin' => $jenis_kelamin
+				'no_hp' => $no_hp
 			);
 			$this->M_admin->insert('tb_operator', $data);
 			$this->session->set_flashdata('msg_sukses', 'Data Berhasil Di Tambahkan');
@@ -748,14 +737,12 @@ class Admin extends CI_Controller
 			$nama = $this->input->post('nama', TRUE);
 			$alamat = $this->input->post('alamat', TRUE);
 			$no_hp = $this->input->post('no_hp', TRUE);
-			$jenis_kelamin = $this->input->post('jenis_kelamin', TRUE);
 
 			$where = array('id' => $id);
 			$data = array(
 				'nama' => $nama,
 				'alamat' => $alamat,
-				'no_hp' => $no_hp,
-				'jenis_kelamin' => $jenis_kelamin,
+				'no_hp' => $no_hp
 			);
 			$this->M_admin->update('tb_operator', $data, $where);
 			$this->session->set_flashdata('msg_sukses', 'Data Berhasil Di Update');
