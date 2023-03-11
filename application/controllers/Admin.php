@@ -51,7 +51,7 @@ class Admin extends CI_Controller
 	}
 
 	####################################
-	// Users
+	//* Users
 	####################################
 	public function users()
 	{
@@ -154,11 +154,11 @@ class Admin extends CI_Controller
 		}
 	}
 	####################################
-	// End Users
+	//* End Users
 	####################################
 
 	####################################
-	// Profile
+	//* Profile
 	####################################
 	public function profile()
 	{
@@ -234,11 +234,11 @@ class Admin extends CI_Controller
 	}
 
 	####################################
-	// End Profile
+	//* End Profile
 	####################################
 
 	####################################
-	// Data Genset
+	//* Data Genset
 	####################################
 
 	public function tabel_genset()
@@ -383,6 +383,9 @@ class Admin extends CI_Controller
 	{
 		$uri = $this->uri->segment(3);
 		$where = array('id' => $uri);
+		if ($where) {
+			unlink('assets/upload/genset/' . $where['gambar_genset']);
+		}
 		$this->M_admin->delete('tb_genset', $where);
 		redirect(base_url('admin/tabel_genset'));
 	}
