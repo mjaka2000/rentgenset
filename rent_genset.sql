@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Mar 2023 pada 00.35
+-- Waktu pembuatan: 11 Mar 2023 pada 09.16
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -107,6 +107,13 @@ CREATE TABLE `tb_mobil` (
   `gambar_mobil` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data untuk tabel `tb_mobil`
+--
+
+INSERT INTO `tb_mobil` (`id`, `merek`, `tipe`, `tahun`, `nopol`, `jenis_bbm`, `pajak`, `stnk`, `gambar_mobil`) VALUES
+(1, 'Daihatsu Gran Max Biru', 'Pickup', '2011', 'DA 1256 CJ', 'Bensin', '10-03-2023', '10-03-2023', 'daihatsu-gran-max-blu.jpg');
+
 -- --------------------------------------------------------
 
 --
@@ -117,8 +124,7 @@ CREATE TABLE `tb_operator` (
   `id` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `alamat` varchar(50) NOT NULL,
-  `no_hp` varchar(20) NOT NULL,
-  `jenis_kelamin` varchar(20) NOT NULL
+  `no_hp` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
@@ -135,6 +141,13 @@ CREATE TABLE `tb_pelanggan` (
   `jenis_kelamin` varchar(20) NOT NULL,
   `nama_perusahaan` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `tb_pelanggan`
+--
+
+INSERT INTO `tb_pelanggan` (`id`, `nama`, `alamat`, `no_hp`, `jenis_kelamin`, `nama_perusahaan`) VALUES
+(1, 'Aldi', 'Jl. HKSN Permai', '089821321234', 'Laki-Laki', 'PT RTR');
 
 -- --------------------------------------------------------
 
@@ -170,7 +183,7 @@ CREATE TABLE `tb_upload_gambar_user` (
 --
 
 INSERT INTO `tb_upload_gambar_user` (`id`, `username_user`, `nama_file`) VALUES
-(1, 'admin', '63e4b66ad290b.png');
+(1, 'admin', '640c36ac4df35.jpg');
 
 -- --------------------------------------------------------
 
@@ -181,7 +194,6 @@ INSERT INTO `tb_upload_gambar_user` (`id`, `username_user`, `nama_file`) VALUES
 CREATE TABLE `tb_user` (
   `id` int(12) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
   `role` tinyint(4) NOT NULL DEFAULT 0,
   `last_login` varchar(20) NOT NULL
@@ -191,8 +203,8 @@ CREATE TABLE `tb_user` (
 -- Dumping data untuk tabel `tb_user`
 --
 
-INSERT INTO `tb_user` (`id`, `username`, `email`, `password`, `role`, `last_login`) VALUES
-(1, 'admin', 'admin@gmail.com', '$2y$10$ZxCzpmMY4v6FO30lX46QC.4r82/MJYxxNyFw3MKryzcDFhpf1n74C', 1, '09-03-2023 17:17');
+INSERT INTO `tb_user` (`id`, `username`, `password`, `role`, `last_login`) VALUES
+(1, 'admin', '$2y$10$ZxCzpmMY4v6FO30lX46QC.4r82/MJYxxNyFw3MKryzcDFhpf1n74C', 1, '11-03-2023 16:00');
 
 --
 -- Indexes for dumped tables
@@ -260,13 +272,13 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT untuk tabel `tb_genset`
 --
 ALTER TABLE `tb_genset`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_mobil`
 --
 ALTER TABLE `tb_mobil`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_operator`
@@ -278,7 +290,7 @@ ALTER TABLE `tb_operator`
 -- AUTO_INCREMENT untuk tabel `tb_pelanggan`
 --
 ALTER TABLE `tb_pelanggan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_serv_genset`
