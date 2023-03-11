@@ -27,7 +27,7 @@
             </li>
 
             <li class="treeview"><a href="#"><i class="fa fa-table"></i>
-                    <span>Data Master</span><span class="pull-right-container"></span><i class="pull-right fa fa-angle-left "></i></span>
+                    <span>Menu Data</span><span class="pull-right-container"></span><i class="pull-right fa fa-angle-left "></i></span>
                 </a>
                 <ul class="treeview-menu">
                     <li>
@@ -36,11 +36,28 @@
                             <span>Data Genset</span>
                         </a>
                     </li>
-
+                    <li>
+                        <a href="<?= base_url(); ?>admin/tabel_service_genset">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Data Perbaikan Genset</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Data Sparepart Genset</span>
+                        </a>
+                    </li>
                     <li>
                         <a href="<?= base_url(); ?>admin/tabel_mobil">
                             <i class="fa fa-circle-o"></i>
                             <span>Data Mobil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-circle-o"></i>
+                            <span>Data Perbaikan Mobil</span>
                         </a>
                     </li>
                     <li>
@@ -58,18 +75,7 @@
 
                 </ul>
             </li>
-            <li>
-                <a href="<?= base_url(); ?>admin/tabel_service_genset">
-                    <i class="fa fa-file"></i>
-                    <span>Data Perbaikan Genset</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-file"></i>
-                    <span>Data Sparepart Genset</span>
-                </a>
-            </li>
+
             <li class="treeview"><a href="#"><i class="fa fa-copy"></i>
                     <span>Transaksi</span><span class="pull-right-container"></span><i class="pull-right fa fa-angle-left "></i></span>
                 </a>

@@ -1,6 +1,6 @@
-<?php $this->load->view('template/head1'); ?>
-<?php $this->load->view('admin/template/nav1'); ?>
-<?php $this->load->view('admin/template/sidebar1'); ?>
+<?php $this->load->view('template/head'); ?>
+<?php $this->load->view('admin/template/nav'); ?>
+<?php $this->load->view('admin/template/sidebar'); ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -15,12 +15,15 @@
 
     <!-- Main content -->
     <section class="content">
+        <div id="loading">
+            <img src="<?= base_url(); ?>assets/style/loading.gif" alt="loading" width="50%">
+        </div>
         <!-- Default box -->
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title"><i class="nav-icon fa fa-users mr-2"></i>Data User</h3>
+                        <h3 class="box-title">Data User</h3>
                     </div>
                     <div class="box-body">
                         <?php if ($this->session->flashdata('msg_sukses')) { ?>
@@ -36,7 +39,6 @@
                                 <tr>
                                     <th style="width :10px">No.</th>
                                     <th>Username</th>
-                                    <th>Email</th>
                                     <th>Role</th>
                                     <th>Last Login</th>
                                     <th style="width:10%">Aksi</th>
@@ -50,7 +52,6 @@
                                         <tr>
                                             <td><?= $no++; ?></td>
                                             <td><?= $u->username ?></td>
-                                            <td><?= $u->email ?></td>
                                             <?php if ($u->role == 1) { ?>
                                                 <td>User Admin</td>
                                             <?php } else { ?>
@@ -83,4 +84,8 @@
     <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-<?php $this->load->view('template/footer1'); ?>
+<?php $this->load->view('template/footer'); ?>
+<?php $this->load->view('admin/template/script') ?>
+</body>
+
+</html>
