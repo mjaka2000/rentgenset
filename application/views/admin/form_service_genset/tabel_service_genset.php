@@ -23,7 +23,7 @@
                 <!-- Default box -->
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title"><i class="fa fa-wrench mr-2"></i>&nbsp;Data Perbaikan Genset</h3>
+                        <h3 class="box-title">&nbsp;Data Perbaikan Genset</h3>
                     </div>
                     <div class="box-body">
                         <?php if ($this->session->flashdata('msg_sukses')) { ?>

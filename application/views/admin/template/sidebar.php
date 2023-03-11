@@ -32,26 +32,26 @@
                 <ul class="treeview-menu">
                     <li>
                         <a href="<?= base_url(); ?>admin/tabel_genset">
-                            <i class="fa fa-cogs"></i>
+                            <i class="fa fa-circle-o"></i>
                             <span>Data Genset</span>
                         </a>
                     </li>
 
                     <li>
                         <a href="<?= base_url(); ?>admin/tabel_mobil">
-                            <i class="fa fa-car nav-icon"></i>
+                            <i class="fa fa-circle-o"></i>
                             <span>Data Mobil</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?= base_url(); ?>admin/tabel_operator">
-                            <i class="fa fa-user nav-icon"></i>
+                            <i class="fa fa-circle-o"></i>
                             <span>Data Operator</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?= base_url(); ?>admin/tabel_pelanggan">
-                            <i class="fa fa-users nav-icon"></i>
+                            <i class="fa fa-circle-o"></i>
                             <span>Data Pelanggan</span>
                         </a>
                     </li>
@@ -60,13 +60,13 @@
             </li>
             <li>
                 <a href="<?= base_url(); ?>admin/tabel_service_genset">
-                    <i class="fa fa-file nav-icon"></i>
+                    <i class="fa fa-file"></i>
                     <span>Data Perbaikan Genset</span>
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <i class="fa fa-file nav-icon"></i>
+                    <i class="fa fa-file"></i>
                     <span>Data Sparepart Genset</span>
                 </a>
             </li>
@@ -76,13 +76,13 @@
                 <ul class="treeview-menu">
                     <li>
                         <a href="<?= base_url(); ?>admin/tabel_barang_keluar">
-                            <i class="fa fa-upload nav-icon"></i>
+                            <i class="fa fa-upload"></i>
                             <span>Data Genset Keluar</span>
                         </a>
                     </li>
                     <li>
                         <a href="<?= base_url(); ?>admin/tabel_barang_masuk">
-                            <i class="fa fa-download nav-icon"></i>
+                            <i class="fa fa-download"></i>
                             <span>Data Genset Masuk</span>
                         </a>
                     </li>

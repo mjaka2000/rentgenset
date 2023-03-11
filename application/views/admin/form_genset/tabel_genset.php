@@ -22,7 +22,7 @@
             <div class="col-xs-12">
                 <div class="box">
                     <div class="box-header">
-                        <h3 class="box-title"><i class="nav-icon fa fa-cogs mr-2"></i>&nbsp;Data Genset</h3>
+                        <h3 class="box-title">&nbsp;Data Genset</h3>
                     </div>
                     <div class="box-body">
                         <?php if ($this->session->flashdata('msg_sukses')) { ?>
