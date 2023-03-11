@@ -143,6 +143,7 @@ class Admin extends CI_Controller
 			$this->session->set_flashdata('msg_sukses', 'Data User Berhasil Diubah');
 			redirect(base_url('admin/users'));
 		} else {
+			$data['avatar'] = $this->M_admin->get_data_gambar(' tb_upload_gambar_user', $this->session->userdata('name'));
 			$data['title'] = 'Edit User';
 			$this->load->view('admin/form_users/edituser', $data);
 		}

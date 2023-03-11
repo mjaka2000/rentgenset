@@ -456,8 +456,8 @@ class Report extends CI_Controller
                 <th style="width:80px" align="center">Nama Genset</th>
                 <th style="width:50px" align="center">Daya</th>
                 <th style="width:100px" align="center">Harga Perhari</th>
-                <th style="width:70px" align="center">Stok Digudang</th>
-                <th style="width:70px" align="center">Stok Dipinjam</th>
+                <th style="width:70px" align="center">Unit Digudang</th>
+                <th style="width:70px" align="center">Unit Disewakan</th>
                 <th style="width:150px" align="center">Gambar</th>
               </tr>';
 
@@ -544,7 +544,6 @@ class Report extends CI_Controller
                   <th style="width:150px" align="center">Nama</th>
                   <th style="width:150px" align="center">Alamat</th>
                   <th style="width:150px" align="center">No. Hp</th>
-                  <th style="width:150px" align="center">Jenis Kelamin</th>
     
                 </tr>';
 
@@ -556,7 +555,6 @@ class Report extends CI_Controller
       $html .= '<td align="center">' . $d->nama . '</td>';
       $html .= '<td align="center">' . $d->alamat . '</td>';
       $html .= '<td align="center">' . $d->no_hp . '</td>';
-      $html .= '<td align="center">' . $d->jenis_kelamin . '</td>';
       $html .= '</tr>';
       $no++;
     endforeach;

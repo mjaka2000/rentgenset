@@ -24,13 +24,11 @@ class Register extends CI_Controller
     public function proses_register()
     {
         $this->form_validation->set_rules('username', 'Username', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]');
 
         if ($this->form_validation->run() == true) {
             $username = $this->input->post('username', true);
-            $email = $this->input->post('email', true);
             $password = $this->input->post('password', true);
 
             if ($this->M_login->cek_username('tb_user', $username)) {
@@ -39,7 +37,6 @@ class Register extends CI_Controller
             } else {
                 $data = array(
                     'username' => $username,
-                    'email' => $email,
                     'password' => $this->hash_password($password)
                 );
 
