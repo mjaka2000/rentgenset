@@ -27,7 +27,7 @@
             </li>
 
             <li class="treeview"><a href="#"><i class="fa fa-table"></i>
-                    <span>Menu Data</span><span class="pull-right-container"></span><i class="pull-right fa fa-angle-left "></i></span>
+                    <span>Data Master</span><span class="pull-right-container"></span><i class="pull-right fa fa-angle-left "></i></span>
                 </a>
                 <ul class="treeview-menu">
                     <li>
