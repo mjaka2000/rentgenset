@@ -41,7 +41,6 @@
                                     <th>Nama</th>
                                     <th>Alamat</th>
                                     <th>No. HP</th>
-                                    <th>Jenis Kelamin</th>
                                     <th style="width:10%">Aksi</th>
                                 </tr>
                             </thead>
@@ -56,7 +55,6 @@
                                             <td><?= $dt->nama; ?></td>
                                             <td><?= $dt->alamat; ?></td>
                                             <td><?= $dt->no_hp; ?></td>
-                                            <td><?= $dt->jenis_kelamin; ?></td>
                                             <td><a href="<?= base_url('admin/update_data_operator/' . $dt->id); ?>" type="button" class="btn btn-sm btn-info" name="btn_edit"><i class="fa fa-edit mr-2"></i></a>
                                                 <a href="<?= base_url('admin/hapus_operator/' . $dt->id); ?>" type="button" class="btn btn-sm btn-danger btn-delete" name="btn_delete"><i class="fa fa-trash mr-2"></i></a>
                                                 <!-- <a href="<?= base_url('admin/'); ?>" type="button" class="btn btn-xs btn-warning" name="btn_detail"><i class="fa fa-info-circle mr-2"></i></a> -->

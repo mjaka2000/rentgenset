@@ -55,14 +55,6 @@
                                     <label for="no_hp" class="form-label">No. HP</label>
                                     <input type="number" name="no_hp" class="form-control" id="no_hp" placeholder="Masukkan No. HP" required>
                                 </div>
-                                <div class="form-group">
-                                    <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                                    <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
-                                        <option value="">-- Pilih --</option>
-                                        <option value="Laki-Laki">Laki-Laki</option>
-                                        <option value="Perempuan">Perempuan</option>
-                                    </select>
-                                </div>
                                 <hr>
                                 <div class="form-group" align="center">
                                     <a href="<?= base_url('admin/tabel_operator'); ?>" type="button" class="btn btn-sm btn-default" name="btn_kembali"><i class="fa fa-arrow-left mr-2"></i>Kembali</a>

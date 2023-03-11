@@ -56,19 +56,6 @@
                                         <label for="no_hp" class="form-label">No. HP</label>
                                         <input type="number" name="no_hp" class="form-control" id="no_hp" placeholder="Masukkan No. HP" required value="<?= $op->no_hp; ?>">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                                        <select name="jenis_kelamin" id="jenis_kelamin" class="form-control">
-                                            <option value="">-- Pilih --</option>
-                                            <?php if ($op->jenis_kelamin == "Laki-Laki") { ?>
-                                                <option value="Laki-Laki" selected>Laki-Laki</option>
-                                                <option value="Perempuan">Perempuan</option>
-                                            <?php } else { ?>
-                                                <option value="Laki-Laki">Laki-Laki</option>
-                                                <option value="Perempuan" selected>Perempuan</option>
-                                            <?php } ?>
-                                        </select>
-                                    </div>
                                 <?php } ?>
                                 <hr>
                                 <div class="form-group" align="center">
