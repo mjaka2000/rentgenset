@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Mar 2023 pada 09.16
+-- Waktu pembuatan: 11 Mar 2023 pada 16.47
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -183,7 +183,8 @@ CREATE TABLE `tb_upload_gambar_user` (
 --
 
 INSERT INTO `tb_upload_gambar_user` (`id`, `username_user`, `nama_file`) VALUES
-(1, 'admin', '640c36ac4df35.jpg');
+(1, 'admin', '640c36ac4df35.jpg'),
+(8, 'jaka', 'nopic.png');
 
 -- --------------------------------------------------------
 
@@ -204,7 +205,8 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id`, `username`, `password`, `role`, `last_login`) VALUES
-(1, 'admin', '$2y$10$ZxCzpmMY4v6FO30lX46QC.4r82/MJYxxNyFw3MKryzcDFhpf1n74C', 1, '11-03-2023 16:00');
+(1, 'admin', '$2y$10$ZxCzpmMY4v6FO30lX46QC.4r82/MJYxxNyFw3MKryzcDFhpf1n74C', 1, '11-03-2023 23:07'),
+(16, 'jaka', '$2y$10$b7G1LziahDnaNObLxw9N2uZuRuhY4LrNKB7DkSMJTaQrGiiJkA7Jq', 0, '11-03-2023 23:14');
 
 --
 -- Indexes for dumped tables
@@ -302,13 +304,13 @@ ALTER TABLE `tb_serv_genset`
 -- AUTO_INCREMENT untuk tabel `tb_upload_gambar_user`
 --
 ALTER TABLE `tb_upload_gambar_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
