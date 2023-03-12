@@ -108,6 +108,12 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label for="nama" class="col-sm-2 control-label">Nama</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="nama" class="form-control" id="nama" value="<?= $this->session->userdata('nama'); ?>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="new_password" class="col-sm-2 control-label">Password Baru</label>
                                         <div class="col-sm-10">
                                             <input type="password" name="new_password" class="form-control" id="new_password" placeholder="Password Baru">

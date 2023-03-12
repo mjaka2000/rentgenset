@@ -54,18 +54,18 @@ class Guest extends CI_Controller
 
     public function proses_newpassword()
     {
-        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+        $this->form_validation->set_rules('nama', 'Nama', 'required');
         $this->form_validation->set_rules('new_password', 'Password Baru', 'required');
         $this->form_validation->set_rules('confirm_new_password', 'Konfirmasi Password Baru', 'required|matches[new_password]');
 
         if ($this->form_validation->run() == true) {
 
             $username = $this->input->post('username');
-            $email = $this->input->post('email');
+            $nama = $this->input->post('nama');
             $new_password = $this->input->post('new_password');
 
             $data = array(
-                'email' => $email,
+                'nama' => $nama,
                 'password' => $this->hash_password($new_password)
             );
             $where = array(

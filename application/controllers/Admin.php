@@ -70,17 +70,20 @@ class Admin extends CI_Controller
 
 	public function proses_tambahuser()
 	{
+		$this->form_validation->set_rules('nama', 'Nama', 'required');
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required');
 		$this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]');
 
 		if ($this->form_validation->run() == true) {
 
+			$nama 	= $this->input->post('nama', true);
 			$username 	= $this->input->post('username', true);
 			$password 	= $this->input->post('password', true);
 			$role 		= $this->input->post('role', true);
 
 			$data = array(
+				'nama'	=> $nama,
 				'username'	=> $username,
 				'password' 	=> $this->hash_password($password),
 				'role' 		=> $role,
@@ -128,15 +131,18 @@ class Admin extends CI_Controller
 	public function proses_edituser()
 	{
 		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('nama', 'Nama', 'required');
 
 		if ($this->form_validation->run() == true) {
 			$id	= $this->input->post('id', true);
 			$username	= $this->input->post('username', true);
+			$nama	= $this->input->post('nama', true);
 			$role = $this->input->post('role', true);
 
 			$where = array('id' => $id);
 			$data = array(
 				'username' => $username,
+				'nama' => $nama,
 				'role' => $role,
 			);
 			$this->M_admin->update('tb_user', $data, $where);
@@ -165,15 +171,18 @@ class Admin extends CI_Controller
 
 	public function proses_newpassword()
 	{
+		$this->form_validation->set_rules('nama', 'Nama', 'required');
 		$this->form_validation->set_rules('new_password', 'Password Baru', 'required');
 		$this->form_validation->set_rules('confirm_new_password', 'Konfirmasi Password Baru', 'required|matches[new_password]');
 
 		if ($this->form_validation->run() == true) {
 
 			$username = $this->input->post('username');
+			$nama = $this->input->post('nama');
 			$new_password = $this->input->post('new_password');
 
 			$data = array(
+				'nama' => $nama,
 				'password' => $this->hash_password($new_password)
 			);
 			$where = array(

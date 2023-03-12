@@ -42,6 +42,10 @@
                                     </div>
                                 <?php } ?>
                                 <div class="form-group">
+                                    <label for="username" class="form-label">Nama</label>
+                                    <input type="text" name="nama" class="form-control" id="nama" placeholder="Nama" required>
+                                </div>
+                                <div class="form-group">
                                     <label for="username" class="form-label">Username</label>
                                     <input type="text" name="username" class="form-control" id="username" placeholder="Username" required>
                                 </div>

@@ -51,6 +51,7 @@ class Login extends CI_Controller
 					$data_session = array(
 						'id' => $isi->id,
 						'name' => $username,
+						'nama' => $isi->nama,
 						'status' => 'login',
 						'role' => $isi->role,
 						'last_login' => $isi->last_login

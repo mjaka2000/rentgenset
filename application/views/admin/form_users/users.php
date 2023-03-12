@@ -38,6 +38,7 @@
                             <thead>
                                 <tr>
                                     <th style="width :10px">No.</th>
+                                    <th>Nama</th>
                                     <th>Username</th>
                                     <th>Role</th>
                                     <th>Last Login</th>
@@ -51,6 +52,7 @@
                                     <?php foreach ($user as $u) : ?>
                                         <tr>
                                             <td><?= $no++; ?></td>
+                                            <td><?= $u->nama ?></td>
                                             <td><?= $u->username ?></td>
                                             <?php if ($u->role == 1) { ?>
                                                 <td>User Admin</td>
