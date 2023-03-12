@@ -6,7 +6,7 @@
             <div class="box box-outline box-primary">
                 <img class="img" src="<?= base_url(); ?>assets/upload/logo/ws.png" alt="Logo" width="100%">
                 <div class="box-header text-center">
-                    <h4><b>SILAHKAN REGISTER</b></h4>
+                    <h4><b>REGISTER</b></h4>
                 </div>
                 <div class="box-body">
                     <!-- <p class="login-box-msg"><b>*</b>Register sebagai user biasa</p> -->
@@ -33,7 +33,12 @@
                         <?php } ?>
 
                         <div class="form-group has-feedback">
-                            <input type="text" class="form-control" name="username" placeholder="Username" autofocus required="" />
+                            <input type="text" class="form-control" name="nama" placeholder="Nama Anda" autofocus required="" />
+                            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+
+                        </div>
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" name="username" placeholder="Username" required="" />
                             <span class="glyphicon glyphicon-user form-control-feedback"></span>
 
                         </div>
@@ -65,17 +70,6 @@
                         </div>
                     </form>
 
-                    <!-- <div class="social-auth-links text-center">
-                <a href="#" class="btn btn-block btn-primary">
-                    <i class="fab fa-facebook mr-2"></i>
-                    Sign up using Facebook
-                </a>
-                <a href="#" class="btn btn-block btn-danger">
-                    <i class="fab fa-google-plus mr-2"></i>
-                    Sign up using Google+
-                </a>
-            </div> -->
-                    <!-- <a href="login.html" class="text-center">I already have a membership</a> -->
                 </div>
                 <!-- /.form-box -->
             </div><!-- /.box -->
@@ -83,3 +77,6 @@
     </div>
 
     <?php $this->load->view('login/template/footer'); ?>
+</body>
+
+</html>

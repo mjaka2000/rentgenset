@@ -18,6 +18,8 @@
   <link rel="stylesheet" href="<?= base_url(); ?>assets/admin2/dist/css/AdminLTE.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="<?= base_url(); ?>assets/admin2/plugins/iCheck/square/blue.css">
+  <link rel="stylesheet" href="<?= base_url() ?>assets/style/style.css">
+
   <style>
     body {
       font-family: "Open Sans", sans-serif;

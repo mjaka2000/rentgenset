@@ -8,7 +8,7 @@
             <div class="box box-outline box-primary">
                 <img class="img" src="<?= base_url(); ?>assets/upload/logo/ws.png" alt="Logo" width="100%">
                 <div class="box-header text-center">
-                    <h4><b>SILAHKAN LOGIN</b></h4>
+                    <h4><b>LOGIN</b></h4>
                 </div>
                 <div class="box-body">
                     <!-- <p class="login-box-msg">Silahkan Login untuk masuk</p> -->
@@ -47,6 +47,7 @@
                     </form>
                 </div>
                 <!-- /.box-body -->
+
             </div>
             <!-- /.box -->
         </div>
@@ -54,3 +55,8 @@
     </div>
 
     <?php $this->load->view('login/template/footer'); ?>
+
+
+</body>
+
+</html>
