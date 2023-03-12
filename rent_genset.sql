@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Mar 2023 pada 16.47
+-- Waktu pembuatan: 12 Mar 2023 pada 03.38
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 7.4.33
 
@@ -184,7 +184,8 @@ CREATE TABLE `tb_upload_gambar_user` (
 
 INSERT INTO `tb_upload_gambar_user` (`id`, `username_user`, `nama_file`) VALUES
 (1, 'admin', '640c36ac4df35.jpg'),
-(8, 'jaka', 'nopic.png');
+(8, 'jaka', 'nopic.png'),
+(9, 'anonym', 'nopic.png');
 
 -- --------------------------------------------------------
 
@@ -194,6 +195,7 @@ INSERT INTO `tb_upload_gambar_user` (`id`, `username_user`, `nama_file`) VALUES
 
 CREATE TABLE `tb_user` (
   `id` int(12) NOT NULL,
+  `nama` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(100) NOT NULL,
   `role` tinyint(4) NOT NULL DEFAULT 0,
@@ -204,9 +206,10 @@ CREATE TABLE `tb_user` (
 -- Dumping data untuk tabel `tb_user`
 --
 
-INSERT INTO `tb_user` (`id`, `username`, `password`, `role`, `last_login`) VALUES
-(1, 'admin', '$2y$10$ZxCzpmMY4v6FO30lX46QC.4r82/MJYxxNyFw3MKryzcDFhpf1n74C', 1, '11-03-2023 23:07'),
-(16, 'jaka', '$2y$10$b7G1LziahDnaNObLxw9N2uZuRuhY4LrNKB7DkSMJTaQrGiiJkA7Jq', 0, '11-03-2023 23:14');
+INSERT INTO `tb_user` (`id`, `nama`, `username`, `password`, `role`, `last_login`) VALUES
+(1, 'jaka admin ', 'admin', '$2y$10$ZxCzpmMY4v6FO30lX46QC.4r82/MJYxxNyFw3MKryzcDFhpf1n74C', 1, '12-03-2023 10:29'),
+(16, 'jaka user', 'jaka', '$2y$10$b7G1LziahDnaNObLxw9N2uZuRuhY4LrNKB7DkSMJTaQrGiiJkA7Jq', 0, '11-03-2023 23:14'),
+(17, 'anonim', 'anonym', '$2y$10$omF62Ujk2MT1woNs1a9hgu7tGLuc8aJsBPmYDql2aE6dvud1QXLEC', 0, '12-03-2023 10:32');
 
 --
 -- Indexes for dumped tables
@@ -304,13 +307,13 @@ ALTER TABLE `tb_serv_genset`
 -- AUTO_INCREMENT untuk tabel `tb_upload_gambar_user`
 --
 ALTER TABLE `tb_upload_gambar_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
